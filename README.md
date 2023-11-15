@@ -62,3 +62,4 @@ cd Downloads/ursim-5.X.X.XXXXX
 ./start-ursim.sh
 ```
 It's time for you to enjoy the URSim !!!
+![alt text](images/ursim_ubuntu.png "ursim_ubuntu")    
