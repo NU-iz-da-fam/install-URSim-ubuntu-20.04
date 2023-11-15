@@ -63,3 +63,8 @@ cd Downloads/ursim-5.X.X.XXXXX
 ```
 It's time for you to enjoy the URSim !!!
 ![alt text](images/ursim_ubuntu.png "ursim_ubuntu")    
+
+### Notes: 
+- Each UR Sim software version will be compatible with specific URCap SDK and URCap API. Make sure you install correctly the version of URCap to extend UR robot capabilities.
+- As with UR Soft ver5.13, it will work with URCap API: 1.13.0, URCap SDK: 1.13.0
+- Check this link for more detail: https://www.universal-robots.com/articles/ur/release-notes/release-note-software-version-513xx/   
