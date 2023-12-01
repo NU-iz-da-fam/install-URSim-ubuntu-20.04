@@ -64,7 +64,29 @@ cd Downloads/ursim-5.X.X.XXXXX
 It's time for you to enjoy the URSim !!!
 ![alt text](images/ursim_ubuntu.png "ursim_ubuntu")    
 
+### Install URCap SDK on URSim
+- The URCaps SDK is the core tool for you to develop a URCap plugin for the graphical programming interface PolyScope. You could access here and download: https://www.universal-robots.com/download/software-e-series/support/urcaps-sdk/   
+- If you are newbie with URCap, it's a good idea to take a glance at this tutorial: https://youtu.be/ncZJQKL4Fxo?si=zrQt5sAAuYwgPKu6 . This will guide you how to do to install and run a sample URCap with URCap SDK. Note that, he worked with URSim running on VM.
+- Prerequisites used in this README: Java SDK 6, Apache Maven 3.0.5, PolyScope version >= 5.11.0 and URCap API sdk-1.13.0. Make sure you have installed or downloaded all these packages before urcap installation
+- Firstly, unzip the SDK and access to folder, install the file
+```
+unzip sdk-1.13.0.zip -d sdk-1.13.0
+cd sdk-1.13.0/
+./install.sh
+```
+- Build and deploy URCap into URSim. There are 2 ways to do that.
+  +  I. Build, generated ```.urcap```. Copy to URSim programs place and deploy as in real Robot
+    ```
+    cd samples/swing/com.ur.urcap.examples.helloworldswing/
+    mvn install
+    ```
+  +    Then a file with extension ```helloworldswing-1.0-SNAPSHOT.urcap``` will be generated in target folder.
+  +    Copy ```helloworldswing-1.0-SNAPSHOT.urcap``` to programs.UR5 (inside URSim installation folder)
+    ```   
+    cp helloworldswing-1.0-SNAPSHOT.urcap ~/programs.UR5
+    ```
+  +    II. Deploy directly with Maven.
 ### Notes: 
 - Each UR Sim software version will be compatible with specific URCap SDK and URCap API. Make sure you install correctly the version of URCap to extend UR robot capabilities.
-- As with UR Soft ver5.13, it will work with URCap API: 1.13.0, URCap SDK: 1.13.0
+- As with UR Soft ver5.13, it will work with ```URCap API: 1.13.0```, ```URCap SDK: 1.13.0```
 - Check this link for more detail: https://www.universal-robots.com/articles/ur/release-notes/release-note-software-version-513xx/   
